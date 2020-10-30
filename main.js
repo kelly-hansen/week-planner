@@ -18,6 +18,8 @@ var $addEntryForm = document.querySelector('.add-entry-form');
 var $dayField = document.querySelector('#day');
 var $timeField = document.querySelector('#time');
 var $descriptionField = document.querySelector('#description');
+var $weekdayDivs = document.querySelectorAll('.weekday');
+
 
 $addEntryBtn.addEventListener('click', function(e){
   $modalContainer.className = 'modal-container';
@@ -54,3 +56,9 @@ window.addEventListener('DOMContentLoaded', function(){
     data = JSON.parse(previousDataJson);
   }
 });
+
+$weekdayDivs.addEventListener('click', dataViewSwap);
+
+function dataViewSwap(e) {
+  var newDataView = e.target.getAttribute('data-view');
+}

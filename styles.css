@@ -33,7 +33,7 @@ header h1 {
 }
 
 .weekday {
-  background-color: lightsalmon;
+  background-color: rgb(127, 127, 127);
   width: 5rem;
   height: 4rem;
   display: flex;
@@ -93,4 +93,8 @@ header h1 {
 
 .hidden {
   display: none;
+}
+
+.day-selected {
+  background-color: lightsalmon;
 }
