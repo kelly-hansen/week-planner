@@ -36,7 +36,7 @@
         <div class="row">
           <form class="add-entry-form">
             <div class="modal-form-spacing">
-              <select name="day" id="day">
+              <select name="day" id="day" required>
                 <option selected disabled>Day of Week</option>
                 <option value="sunday">Sunday</option>
                 <option value="monday">Monday</option>
@@ -46,10 +46,10 @@
                 <option value="friday">Friday</option>
                 <option value="saturday">Saturday</option>
               </select>
-              <input type="time">
+              <input type="time" id="time" required>
             </div>
             <div class="modal-form-spacing">
-              <textarea name="description" id="" cols="60" rows="5"></textarea>
+              <textarea name="description" id="description" cols="60" rows="5" placeholder="Description" required></textarea>
             </div>
             <div class="modal-form-spacing text-align-right">
               <input id="entry-submit-btn" class="btn" type="submit">

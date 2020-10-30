@@ -15,10 +15,20 @@ var $addEntryBtn = document.querySelector('#addEntryBtn');
 var $modalContainer = document.querySelector('.modal-container');
 var $entrySubmitBtn = document.querySelector('#entry-submit-btn');
 var $addEntryForm = document.querySelector('.add-entry-form');
+var $dayField = document.querySelector('#day');
+var $timeField = document.querySelector('#time');
+var $descriptionField = document.querySelector('#description');
 
 $addEntryBtn.addEventListener('click', function(e){
   $modalContainer.className = 'modal-container';
 });
+
+function pushNewEntry(day) {
+  var newEntryObj = {};
+  newEntryObj.time = $timeField.value;
+  newEntryObj.description = $descriptionField.value;
+
+}
 
 $entrySubmitBtn.addEventListener('click', function(){
   $modalContainer.className = 'modal-container hidden';
