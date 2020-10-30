@@ -1,8 +1,36 @@
 
 .container {
-  max-width: ;
+  max-width: 900px;
+  margin: 0 auto;
+
+
 }
 
 .row {
+  width: 100%;
+}
+
+.weekdays {
   display: flex;
+  justify-content: space-between;
+}
+
+.weekday {
+  background-color: grey;
+  width: 5rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.entryBtn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+header {
+  text-align: center;
 }
