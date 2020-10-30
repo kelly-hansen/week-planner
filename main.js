@@ -26,19 +26,18 @@ $addEntryBtn.addEventListener('click', function(e){
 });
 
 function pushNewEntry() {
-  console.log('hello');
   var newEntryObj = {};
   newEntryObj.time = $timeField.value;
   newEntryObj.description = $descriptionField.value;
 
   var selectedDay = $dayField.value;
-  data.days.selectedDay.push(newEntryObj);
-  console.log(selectedDay)
+  data.days[selectedDay].push(newEntryObj);
 }
 
 
 
-$addEntryForm .addEventListener('submit', function(){
+$addEntryForm .addEventListener('submit', function(e){
+  e.preventDefault();
   $modalContainer.className = 'modal-container hidden';
   pushNewEntry();
   $addEntryForm.reset();
@@ -57,8 +56,17 @@ window.addEventListener('DOMContentLoaded', function(){
   }
 });
 
-$weekdayDivs.addEventListener('click', dataViewSwap);
+document.addEventListener('click', dataViewSwap);
 
 function dataViewSwap(e) {
-  var newDataView = e.target.getAttribute('data-view');
+  if (e.target.className === 'weekday') {
+    var newDataView = e.target.getAttribute('data-view');
+    var $newDayDiv = document.querySelector('[data-view="' + newDataView + '"]');
+    $newDayDiv.className = 'weekday day-selected';
+
+    var $prevDayDiv = document.querySelector('[data-view="' + data.view + '"]');
+    $prevDayDiv.className = 'weekday';
+
+    data.view = newDataView;
+  }
 }
