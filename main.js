@@ -23,15 +23,22 @@ $addEntryBtn.addEventListener('click', function(e){
   $modalContainer.className = 'modal-container';
 });
 
-function pushNewEntry(day) {
+function pushNewEntry() {
+  console.log('hello');
   var newEntryObj = {};
   newEntryObj.time = $timeField.value;
   newEntryObj.description = $descriptionField.value;
 
+  var selectedDay = $dayField.value;
+  data.days.selectedDay.push(newEntryObj);
+  console.log(selectedDay)
 }
 
-$entrySubmitBtn.addEventListener('click', function(){
+
+
+$addEntryForm .addEventListener('submit', function(){
   $modalContainer.className = 'modal-container hidden';
+  pushNewEntry();
   $addEntryForm.reset();
 });
 
