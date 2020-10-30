@@ -24,18 +24,18 @@
         <div class="weekday" data-view="saturday">Saturday</div>
       </div>
       <div class="row entryBtn">
-        <button class="addEntryBtn">Add Entry</button>
+        <button class="btn">Add Entry</button>
       </div>
     </div>
 
-    <div class="modal-container">
+    <div class="modal-container hidden">
       <div class="modal">
         <div class="row">
           <h1>Add Entry</h1>
         </div>
         <div class="row">
           <form class="add-entry-form">
-            <div>
+            <div class="modal-form-spacing">
               <select name="day" id="day">
                 <option selected disabled>Day of Week</option>
                 <option value="sunday">Sunday</option>
@@ -48,11 +48,11 @@
               </select>
               <input type="time">
             </div>
-            <div>
-              <textarea name="description" id="" cols="30" rows="5"></textarea>
+            <div class="modal-form-spacing">
+              <textarea name="description" id="" cols="60" rows="5"></textarea>
             </div>
-            <div>
-              <input type="submit">
+            <div class="modal-form-spacing text-align-right">
+              <input class="btn" type="submit">
             </div>
           </form>
         </div>
