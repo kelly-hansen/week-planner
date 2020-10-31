@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-family: 'Grandstander', cursive;
 }
 
 header {
@@ -20,8 +21,14 @@ header h1 {
 
 thead {
   background-color: lightsalmon;
+  color: white;
 }
 
+table {
+  margin: 0.5rem;
+  border: 1px solid black;
+  width: 100%;
+}
 
 .container {
   max-width: 900px;
@@ -110,9 +117,13 @@ thead {
 }
 
 .table-cont {
-
+  margin: 0 auto;
   max-width: 900px;
   display: flex;
   justify-content: center;
   text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgray;
 }
