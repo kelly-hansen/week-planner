@@ -18,6 +18,11 @@ header h1 {
   margin: 0;
 }
 
+thead {
+  background-color: lightsalmon;
+}
+
+
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -97,4 +102,17 @@ header h1 {
 
 .day-selected {
   background-color: lightsalmon;
+}
+
+.data-view-cont {
+
+  text-align: center;
+}
+
+.table-cont {
+
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
 }

@@ -59,6 +59,7 @@ window.addEventListener('DOMContentLoaded', function(){
 document.addEventListener('click', dataViewSwap);
 
 function dataViewSwap(e) {
+  console.log(e.target.className);
   if (e.target.className === 'weekday') {
     var newDataView = e.target.getAttribute('data-view');
     var $newDayDiv = document.querySelector('[data-view="' + newDataView + '"]');
