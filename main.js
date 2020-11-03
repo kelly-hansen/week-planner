@@ -17,6 +17,7 @@ var $addEntryForm = document.querySelector('.add-entry-form');
 var $dayField = document.querySelector('#day');
 var $timeField = document.querySelector('#time');
 var $descriptionField = document.querySelector('#description');
+var $cancelAddingBtn = document.querySelector('#cancel-adding-btn');
 
 $addEntryBtn.addEventListener('click', function (e) {
   $modalContainer.className = 'modal-container';
@@ -26,7 +27,6 @@ function pushNewEntry() {
   var newEntryObj = {};
   newEntryObj.time = $timeField.value;
   newEntryObj.description = $descriptionField.value;
-
   var selectedDay = $dayField.value;
   data.days[selectedDay].push(newEntryObj);
 }
@@ -35,6 +35,11 @@ $addEntryForm.addEventListener('submit', function (e) {
   e.preventDefault();
   $modalContainer.className = 'modal-container hidden';
   pushNewEntry();
+  $addEntryForm.reset();
+});
+
+$cancelAddingBtn.addEventListener('click', function () {
+  $modalContainer.className = 'modal-container hidden';
   $addEntryForm.reset();
 });
 
