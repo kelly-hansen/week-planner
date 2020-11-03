@@ -43,6 +43,59 @@ $cancelAddingBtn.addEventListener('click', function () {
   $addEntryForm.reset();
 });
 
+function renderDataViewHTML(newDataView) {
+  var $dataViewContDiv = document.createElement('div');
+  $dataViewContDiv.className = 'data-view-cont';
+
+  var $h2Div = document.createElement('div');
+  $h2Div.className = 'row';
+  $dataViewContDiv.appendChild($h2Div);
+
+  var $h2 = document.createElement('h2');
+  $h2.textContent = 'Scheduled Events for ' + newDataView.charAt(0).toUpperCase() + newDataView.slice(1);
+  $h2Div.appendChild($h2);
+
+  var $tableDiv = document.createElement('div');
+  $tableDiv.className = 'row table-cont';
+  $dataViewContDiv.appendChild($tableDiv);
+
+  var $table = document.createElement('table');
+  $tableDiv.appendChild($table);
+
+  var $thead = document.createElement('thead');
+  $table.appendChild($thead);
+
+  var $trHead = document.createElement('tr');
+  $thead.appendChild($trHead);
+
+  var $thTime = document.createElement('th');
+  $thTime.textContent = 'Time';
+  $trHead.appendChild($thTime);
+
+  var $thDescription = document.createElement('th');
+  $thDescription.textContent = 'Description';
+  $trHead.appendChild($thDescription);
+
+  var $tbody = document.createElement('tbody');
+  $table.appendChild($tbody);
+
+  var $trTemplate = document.createElement('tr');
+
+  var $td1 = document.createElement('td');
+  $trTemplate.appendChild($td1);
+
+  var $td2 = document.createElement('td');
+  $trTemplate.appendChild($td2);
+
+  for (var i = 0; i < 8; i++) {
+    $tbody.appendChild($trTemplate);
+  }
+
+  return $dataViewContDiv;
+
+  // need to check this render for accuracy, call in dataViewSwap, appending to main element and removing any existing
+}
+
 function dataViewSwap(newDataView) {
   var $prevDayDiv = document.querySelector('[data-view="' + data.view + '"]');
   $prevDayDiv.className = 'weekday';
