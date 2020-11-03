@@ -13,15 +13,12 @@ var data = {
 
 var $addEntryBtn = document.querySelector('#addEntryBtn');
 var $modalContainer = document.querySelector('.modal-container');
-var $entrySubmitBtn = document.querySelector('#entry-submit-btn');
 var $addEntryForm = document.querySelector('.add-entry-form');
 var $dayField = document.querySelector('#day');
 var $timeField = document.querySelector('#time');
 var $descriptionField = document.querySelector('#description');
-var $weekdayDivs = document.querySelectorAll('.weekday');
 
-
-$addEntryBtn.addEventListener('click', function(e){
+$addEntryBtn.addEventListener('click', function (e) {
   $modalContainer.className = 'modal-container';
 });
 
@@ -34,40 +31,40 @@ function pushNewEntry() {
   data.days[selectedDay].push(newEntryObj);
 }
 
-
-
-$addEntryForm .addEventListener('submit', function(e){
+$addEntryForm.addEventListener('submit', function (e) {
   e.preventDefault();
   $modalContainer.className = 'modal-container hidden';
   pushNewEntry();
   $addEntryForm.reset();
 });
 
+function dataViewSwap(newDataView) {
+  var $prevDayDiv = document.querySelector('[data-view="' + data.view + '"]');
+  $prevDayDiv.className = 'weekday';
+  var $newDayDiv = document.querySelector('[data-view="' + newDataView + '"]');
+  $newDayDiv.className = 'weekday day-selected';
+  data.view = newDataView;
+}
+
+function weekdaySwitcher(e) {
+  if (e.target.className !== 'weekday') {
+    return;
+  }
+  var newDataView = e.target.getAttribute('data-view');
+  dataViewSwap(newDataView);
+}
+
+document.addEventListener('click', weekdaySwitcher);
+
+window.addEventListener('DOMContentLoaded', function () {
+  var previousDataJson = localStorage.getItem('data-object');
+  if (previousDataJson !== null) {
+    data = JSON.parse(previousDataJson);
+  }
+  dataViewSwap('monday');
+});
 
 window.addEventListener('beforeunload', function () {
   var dataJson = JSON.stringify(data);
   localStorage.setItem('data-object', dataJson);
 });
-
-window.addEventListener('DOMContentLoaded', function(){
-  var previousDataJson = localStorage.getItem('data-object');
-  if (previousDataJson !== null) {
-    data = JSON.parse(previousDataJson);
-  }
-});
-
-document.addEventListener('click', dataViewSwap);
-
-function dataViewSwap(e) {
-  console.log(e.target.className);
-  if (e.target.className === 'weekday') {
-    var newDataView = e.target.getAttribute('data-view');
-    var $newDayDiv = document.querySelector('[data-view="' + newDataView + '"]');
-    $newDayDiv.className = 'weekday day-selected';
-
-    var $prevDayDiv = document.querySelector('[data-view="' + data.view + '"]');
-    $prevDayDiv.className = 'weekday';
-
-    data.view = newDataView;
-  }
-}

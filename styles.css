@@ -53,13 +53,7 @@ table {
   align-items: center;
   color: white;
   border-radius: 0.5rem;
-   box-shadow: 3px 3px 10px 5px rgba(0,0,0,0.59);
-}
-
-.weekday:hover,
-.btn:hover  {
-  cursor: pointer;
-  background-color: rgb(247, 185, 161);
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.59);
 }
 
 .entryBtn {
@@ -74,10 +68,14 @@ table {
   border: none;
   border-radius: 0.5rem;
   font-family: 'Grandstander', cursive;
-  box-shadow: 3px 3px 10px 5px rgba(0,0,0,0.59);
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.59);
 }
 
-
+.weekday:hover,
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(247, 185, 161);
+}
 
 .modal-container {
   display: flex;
@@ -123,7 +121,6 @@ table {
 }
 
 .data-view-cont {
-
   text-align: center;
 }
 
