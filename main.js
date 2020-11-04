@@ -79,15 +79,14 @@ function renderDataViewHTML(newDataView) {
   var $tbody = document.createElement('tbody');
   $table.appendChild($tbody);
 
-  var $trTemplate = document.createElement('tr');
-
-  var $td1 = document.createElement('td');
-  $trTemplate.appendChild($td1);
-
-  var $td2 = document.createElement('td');
-  $trTemplate.appendChild($td2);
-
   for (var i = 0; i < 8; i++) {
+    var $trTemplate = document.createElement('tr');
+
+    var $td1 = document.createElement('td');
+    $trTemplate.appendChild($td1);
+
+    var $td2 = document.createElement('td');
+    $trTemplate.appendChild($td2);
     $tbody.appendChild($trTemplate);
   }
 
@@ -102,6 +101,12 @@ function dataViewSwap(newDataView) {
   var $newDayDiv = document.querySelector('[data-view="' + newDataView + '"]');
   $newDayDiv.className = 'weekday day-selected';
   data.view = newDataView;
+  var $main = document.querySelector('main');
+  var $dataViewDiv = document.querySelector('.data-view-cont');
+  if ($dataViewDiv) {
+    $main.removeChild($dataViewDiv);
+  }
+  $main.appendChild(renderDataViewHTML(newDataView));
 }
 
 function weekdaySwitcher(e) {

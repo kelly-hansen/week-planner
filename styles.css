@@ -26,8 +26,12 @@ thead {
 
 table {
   margin: 0.5rem;
-  border: 1px solid black;
+  border: 2px solid rgb(127, 127, 127);
   width: 100%;
+}
+
+td {
+  height: 1rem;
 }
 
 .container {
