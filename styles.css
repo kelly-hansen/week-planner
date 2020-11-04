@@ -3,47 +3,38 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: 'Grandstander', cursive;
+  max-width: 900px;
 }
+
 
 header {
-  text-align: center;
-  background-color: lightsalmon;
-  color: white;
-  padding: 1rem 0;
   margin-bottom: 1rem;
-}
-
-header h1 {
-  margin: 0;
-}
-
-thead {
-  background-color: lightsalmon;
-  color: white;
 }
 
 table {
   margin: 0.5rem;
-  border: 1px solid black;
+  border: 1px solid lightsalmon;
   width: 100%;
 }
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 .row {
   width: 100%;
-}
-
-.weekdays {
   display: flex;
+  justify-content: center;
+}
+.text-align-center {
+  text-align: center;
+}
+.background-color {
+  background-color: lightsalmon;
+}
+.white {
+  color: white;
+}
+.weekdays {
   justify-content: space-between;
 }
-
 .weekday {
   background-color: rgb(127, 127, 127);
   width: 6rem;
@@ -51,7 +42,7 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+
   border-radius: 0.5rem;
    box-shadow: 3px 3px 10px 5px rgba(0,0,0,0.59);
 }
