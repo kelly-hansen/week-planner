@@ -10,6 +10,76 @@
 </head>
 
 <body>
+  <header>
+    <h1>Weekly Planner</h1>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row weekdays">
+        <div class="weekday" data-view="sunday">Sunday</div>
+        <div class="weekday" data-view="monday">Monday</div>
+        <div class="weekday" data-view="tuesday">Tuesday</div>
+        <div class="weekday" data-view="wednesday">Wednesday</div>
+        <div class="weekday" data-view="thursday">Thursday</div>
+        <div class="weekday" data-view="friday">Friday</div>
+        <div class="weekday" data-view="saturday">Saturday</div>
+      </div>
+      <div class="row entryBtn">
+        <button id="addEntryBtn" class="btn">Add Entry</button>
+      </div>
+    </div>
+
+    <div class="modal-container hidden">
+      <div class="modal">
+        <div class="row">
+          <h1>Add Entry</h1>
+        </div>
+        <div class="row">
+          <form class="add-entry-form">
+            <div class="modal-form-spacing">
+              <select name="day" id="day" required>
+                <option selected disabled>Day of Week</option>
+                <option value="sunday">Sunday</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+              </select>
+              <input type="time" id="time" required>
+            </div>
+            <div class="modal-form-spacing">
+              <textarea name="description" id="description" cols="60" rows="1" placeholder="Description"
+                required></textarea>
+            </div>
+            <div class="modal-form-spacing">
+              <input id="entry-submit-btn" class="btn" type="submit">
+              <button type="button" id="cancel-adding-btn" class="btn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
   <header class="text-align-center background-color">
     <h1 class="white">Weekly Planner</h1>
   </header>
