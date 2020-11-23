@@ -139,3 +139,135 @@ td {
 tbody tr:nth-child(odd) {
   background-color: lightgray;
 }
+=======
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Grandstander', cursive;
+  max-width: 900px;
+}
+
+
+header {
+  margin-bottom: 1rem;
+}
+
+table {
+  margin: 0.5rem;
+  border: 1px solid lightsalmon;
+  width: 100%;
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.text-align-center {
+  text-align: center;
+}
+.background-color {
+  background-color: lightsalmon;
+}
+.white {
+  color: white;
+}
+.weekdays {
+  justify-content: space-between;
+}
+.weekday {
+  background-color: rgb(127, 127, 127);
+  width: 6rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0.5rem;
+   box-shadow: 3px 3px 10px 5px rgba(0,0,0,0.59);
+}
+
+.weekday:hover,
+.btn:hover  {
+  cursor: pointer;
+  background-color: rgb(247, 185, 161);
+}
+
+.entryBtn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn {
+  color: white;
+  background-color: lightsalmon;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: 'Grandstander', cursive;
+  box-shadow: 3px 3px 10px 5px rgba(0,0,0,0.59);
+}
+
+
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.modal-form-spacing {
+  margin: 1rem 0;
+}
+
+.modal h1 {
+  margin-top: 0;
+}
+
+.add-entry-form select {
+  margin-right: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.day-selected {
+  background-color: lightsalmon;
+}
+
+.data-view-cont {
+
+  text-align: center;
+}
+
+.table-cont {
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgray;
+}
