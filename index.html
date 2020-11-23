@@ -10,24 +10,22 @@
 </head>
 
 <body>
-  <header>
-    <h1>Weekly Planner</h1>
+  <header class="text-align-center background-color">
+    <h1 class="white">Weekly Planner</h1>
   </header>
   <main>
-    <div class="container">
       <div class="row weekdays">
-        <div class="weekday" data-view="sunday">Sunday</div>
-        <div class="weekday" data-view="monday">Monday</div>
-        <div class="weekday" data-view="tuesday">Tuesday</div>
-        <div class="weekday" data-view="wednesday">Wednesday</div>
-        <div class="weekday" data-view="thursday">Thursday</div>
-        <div class="weekday" data-view="friday">Friday</div>
-        <div class="weekday" data-view="saturday">Saturday</div>
+        <div class="weekday row white" data-view="sunday">Sunday</div>
+        <div class="weekday row white" data-view="monday">Monday</div>
+        <div class="weekday row white" data-view="tuesday">Tuesday</div>
+        <div class="weekday row white" data-view="wednesday">Wednesday</div>
+        <div class="weekday row white" data-view="thursday">Thursday</div>
+        <div class="weekday row white" data-view="friday">Friday</div>
+        <div class="weekday row white" data-view="saturday">Saturday</div>
       </div>
-      <div class="row entryBtn">
-        <button id="addEntryBtn" class="btn">Add Entry</button>
+      <div class="row text-align-center entryBtn">
+        <button id="addEntryBtn" class="btn background-color white">Add Entry</button>
       </div>
-    </div>
 
     <div class="modal-container hidden">
       <div class="modal">
@@ -54,23 +52,24 @@
                 required></textarea>
             </div>
             <div class="modal-form-spacing text-align-right">
-              <input id="entry-submit-btn" class="btn" type="submit">
+              <input id="entry-submit-btn" class="btn background-color white" type="submit">
             </div>
           </form>
         </div>
       </div>
     </div>
 
-    <div class="data-view-cont">
+
+    <div class="data-view-cont text-align-center">
       <div class="row">
         <h2>Scheduled Events for Monday</h2>
       </div>
       <div class="row table-cont">
         <table>
-          <thead>
+          <thead class="background-color">
             <tr>
-              <th>Time</th>
-              <th>Description</th>
+              <th class="white">Time</th>
+              <th class="white">Description</th>
             </tr>
           </thead>
           <tbody>
